@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cal" >
+        <hr>
+        <div id="result" class="cal2">
+            <h1 class="calhad">Calculator App</h1>
+        </div>
+        <h3 class="calhad2">What Do You Want</h3>
+        <h3  class="calres"></h3>
+        <button onclick="sum()" class="buts">ADDITION</button>
+        <br>
+        <button onclick="sub()" class="buts">SUBTRACTION</button>
+        <br>
+        <button onclick="div()" class="buts">DIVISION</button>
+        <br>
+        <button onclick="mul()" class="buts">MULTIPLICATION</button>
+        <br>
+        <button onclick="rem()" class="buts">REMENDER</button>
+        
+    
+    </div>
+    <hr>
+    <br>
+    <br>
+    <hr>
+    <div class="cal2" >
+        <div id="resultjec">
+            <h1 class="calhad">Carry Jecket or Not</h1>
+        </div>
+        
+        <button onclick="dec()" class="butD">DECIDE</button>
+        
+    
+    </div>
+    <hr>
+    <br>
+    <br>
+    <hr>
+    <div class="cal2" >
+        <div id="resultg">
+            <h1 class="calhad">Result Card</h1>
+
+        </div>
+        <button onclick="Grade()" class="butD">CHACK GRADE </button>
+        
+    
+    </div>
+    <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        
+        function sum(){
+        let num1 = prompt("Enter First Vaule")
+        let num2 = prompt("Enter Second Vaule")
+        let result = Number(num1)+Number(num2);
+        document.getElementById("result").innerHTML= result;
+        }
+        function sub(){
+        let num1 = prompt("Enter First Vaule")
+        let num2 = prompt("Enter Second Vaule")
+        let result = Number(num1)-Number(num2);
+        document.getElementById("result").innerHTML= result;
+        }
+        function div(){
+        let num1 = prompt("Enter First Vaule")
+        let num2 = prompt("Enter Second Vaule")
+        let result = Number(num1)/Number(num2);
+        document.getElementById("result").innerHTML= result;
+        }
+        function mul(){
+        let num1 = prompt("Enter First Vaule")
+        let num2 = prompt("Enter Second Vaule")
+        let result = Number(num1)*Number(num2);
+        document.getElementById("result").innerHTML= result;
+        }
+        function rem(){
+        let num1 = prompt("Enter First Vaule")
+        let num2 = prompt("Enter Second Vaule")
+        let result = Number(num1)%Number(num2);
+        document.getElementById("result").innerHTML= result;
+        }
+        function dec(){
+        let temp = prompt("What Is The Temperature")
+        if(temp <= 24){
+           let result = " Carry Jecket"
+           document.getElementById('resultjec').innerHTML=result
+        }else if(temp > 25){
+            let result = "Don't Carry Jecket"
+           document.getElementById('resultjec').innerHTML=result
+        }
+        }
+        function Grade(){
+           let sub1 = prompt("Enter Your First Subject Marks = ")
+let sub2 = prompt("Enter Your Second Subject Marks = ")
+let sub3 = prompt("enter Your Third Subject Marks = ")
+let sub4 = prompt("Enter Your  Fourth Subject Marks = ")
+let sub5 = prompt("Enter Your Fifth Subject Marks = ")
+let avg = (Number(sub1)+Number(sub2)+Number(sub3)+Number(sub4)+Number(sub5))/500 * 100
+if (avg>=80){
+    let result="Grade A+"
+    document.getElementById("resultg").innerHTML=result
+}else if(avg>=60 && avg<70){
+    let result="Grade A"
+    document.getElementById("resultg").innerHTML=result
+}else if( avg>=50 && avg<60){
+    let result="Grade B"
+    document.getElementById("resultg").innerHTML=result
+}
+    else if (avg>=40 && avg<50){
+    let result="Grade C"
+    document.getElementById("resultg").innerHTML=result}
+    else if (avg>=32 && avg<40 ){
+    let result="Grade D"
+    document.getElementById("resultg").innerHTML=result
+}else
+{
+    let result="YOu are failed"    
+    document.getElementById("resultg").innerHTML=result
+        }
+    }
+
+    </script>
+</body>
+</html>
